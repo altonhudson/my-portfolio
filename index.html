@@ -50,9 +50,21 @@
           <h2>Contact Us</h2>
         <div class="relative-container">
             <p>We are always happy to hear from you! Reach us via email or phone for any inquiries.</p>
+            <br>
             <div class="absolute-box">
-                <p>Name: Alton Hudson</p>
-                <p>Email: contact@mywebsite.com</p>
+            <form id="name">
+                <label for="userName">Your Name:</label>
+                <input type="text" placeholder="Your name" id="userName">
+                <br><br>
+                <label for="email">Your Email:</label>
+                <input type="text" placeholder="Your email" id="email">
+                <br><br>
+                <div class="messageContainer">
+                <label for="message">Message:</label>
+                <textarea wrap="hard" placeholder="Reason for contacting us." id="message"></textarea>
+                </div>
+
+            </form>
             </div>
         </div>
 
