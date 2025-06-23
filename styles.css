@@ -29,7 +29,10 @@ header {
 
 header h1 {
     font-size: 2.5rem;
-    color: #e0f0f2; /* masculine-tech cyan */
+    color: #e0f0f2; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+
 }
 
 ul {
@@ -76,21 +79,27 @@ a:hover{
 .contact  {
     background-color: #292940cc;
     padding: 30px;
-    margin: 20px 0;
+    margin: 90px 0 20px 0;
     border-left: 6px solid #00bcd4;
     border-radius: 10px;
 }
 
+.interest{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
 h2{
     color:#ffcc00;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
 
 }
 
 .grid-container {
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(15px, 1fr));
-    gap: 20px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,12 +107,16 @@ h2{
 }
 
 .grid-item {
-    background-color: #3a3a50;
+    background-color: #2e3a59;
     padding: 20px;
     border-radius: 6px;
     text-align: center;
     border: 1px solid #444;
     width: 100%
+}
+
+.grid-item:hover{
+    background-color: #424b60;
 }
 
 .footer {
