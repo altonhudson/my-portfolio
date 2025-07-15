@@ -114,6 +114,37 @@ h2 {
   background-color: #1b3a1a;
 }
 
+.hide-project-one-details {
+    display: none;
+    visibility: hidden;
+}
+
+.show-project-one-details {
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    
+}
+
+.project-one-details p{
+    width: 40%;
+    color: white;
+}
+
+.project-one-details img{
+    width: 100px;
+    height: 100px;
+}
+
+button {
+    background-color: #d9b44a;
+    border: 5px solid #d9b44a;
+    border-radius: 5px;
+    color: #1b3a1a;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
 footer {
   position: fixed;
   bottom: 0;
