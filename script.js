@@ -10,9 +10,7 @@ for (let i = 0; i < detailsBtn.length; i++) {
             if (detailsBtn[i].id == details[p].id) {
                 details[p].classList.toggle('show-project-details')
             }
-
         }
-
     })
 }
 
@@ -22,7 +20,6 @@ const validate = () => {
         alert("Please enter your name");
         return false
     }
-
 
     let email = document.getElementById("email").value;
     if (email == "" || email.includes("@") == false) {
