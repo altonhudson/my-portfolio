@@ -114,12 +114,12 @@ h2 {
   background-color: #1b3a1a;
 }
 
-.hide-project-one-details {
+.hide-project-details {
     display: none;
     visibility: hidden;
 }
 
-.show-project-one-details {
+.show-project-details {
     visibility: visible;
     display: flex;
     justify-content: center;
@@ -127,12 +127,12 @@ h2 {
     
 }
 
-.project-one-details p{
+.hide-project-details p{
     width: 40%;
     color: white;
 }
 
-.project-one-details img{
+.hide-project-details img{
     width: 100px;
     height: 100px;
 }

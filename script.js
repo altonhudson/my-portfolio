@@ -1,8 +1,20 @@
-console.log('hello');
-let detailsBtn = document.querySelector('.show-details-one');
-let details = document.querySelector('.hide-project-one-details')
 
-detailsBtn.addEventListener("click", function() {
-    details.classList.toggle('show-project-one-details')
+let detailsBtn = document.querySelectorAll('.project-details');
+let details = document.querySelectorAll('.hide-project-details')
 
-})
+for (let i = 0; i < detailsBtn.length; i++) {
+    detailsBtn[i].addEventListener("click", function () {
+        console.log(detailsBtn[i]);
+
+        for (let p = 0; p < details.length; p++) {
+            if (detailsBtn[i].id == details[p].id) {
+                details[p].classList.toggle('show-project-details')
+            }
+
+        }
+
+    })
+}
+
+
+
