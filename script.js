@@ -14,37 +14,48 @@ for (let i = 0; i < detailsBtn.length; i++) {
     })
 }
 
+let captureErrors = []
+
 const validate = () => {
+    let isValid = true
+
     let name = document.getElementById("userName").value;
     if (name == "") {
-        alert("Please enter your name");
-        return false
-    }
-
+        captureErrors.push("name")
+        isValid = false
+    } 
+    
     let email = document.getElementById("email").value;
     if (email == "" || email.includes("@") == false) {
-        alert("Please entere a valid email");
-        return false;
-    }
-
+        captureErrors.push("email")
+        isValid = false
+    } 
+    
     let message = document.getElementById("message").value;
     if (message == "") {
-        alert("Please enter a valid message. ")
-        return false
-
-    } else if (message.length < 36) {
-        alert("Message must be over 36 characters.")
-        return false
+        captureErrors.push("message")
+        isValid = false
+    }else if (message.length < 36) {
+        captureErrors.push("Message must be over 36 characters")
+        isValid = false  
     }
-    alert("Message has been sent.");
-    return true
+    
+    return isValid
 }
 
 let submit = document.getElementById("submit-button");
 
 submit.addEventListener("click", (e) => {
     e.preventDefault()
+
+    captureErrors.length = 0;
+
     if(validate()){
         document.querySelector("form").reset();
+        alert("Form has been submitted.")
+    
+    } else {
+        alert(`Please validate the following fields: ${captureErrors.join(", ")}.`)
+        console.log(captureErrors);
     }
-})
+});
