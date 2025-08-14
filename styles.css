@@ -165,7 +165,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: #1e1e2f; 
+    background-color: #1e1e2f; /* dark background for contrast */
     padding: 20px;
     border-radius: 10px;
     max-width: 1000px; 
@@ -243,6 +243,85 @@ footer {
 
 }
 
+
+/* Dark Mode Theme */
+
+.dark-mode-btn {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #d9b44a;
+    color: #1e1e2f;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+
+/* Full dark mode styles */
+.dark-mode, .dark-mode footer {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode header {
+    background-color: #1f2937;
+    border-bottom: 4px solid #2c3e50;
+}
+
+.dark-mode nav li {
+    background-color: #06101d;
+    border: 2px solid #06101d;
+}
+
+.dark-mode h1, .dark-mode h2 {
+    color: #f0c94d;
+}
+
+.dark-mode a {
+    color: #4aa3df;
+}
+
+.dark-mode a:hover {
+    color: #f0c94d;
+}
+
+
+.dark-mode .grid-item {
+    background: #06101d;
+}
+
+.dark-mode #userName,
+.dark-mode #email,
+.dark-mode #message,
+.dark-mode .about-me,
+.dark-mode .projects,
+.dark-mode .contact {
+    background-color: #1e2a38;
+    color: #e0e0e0;
+    border: 1px solid #2c3e50;
+}
+
+.dark-mode button {
+    background-color: #f0c94d;
+    color: #1f2937;
+    border: 3px solid #f0c94d;
+}
+
+.dark-mode button:hover {
+    background-color: #887203;
+    color: #1f2937;
+    border: 3px solid #887203;
+}
 
 @media (max-width: 600px) {
 
