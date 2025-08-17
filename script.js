@@ -76,3 +76,9 @@ darkModeBtn.addEventListener('click', () => {
         moonIcon.style.display = "none"
  }
 });
+
+document.querySelectorAll("img.lazy-img").forEach(img => {
+  img.addEventListener("load", () => {
+    img.setAttribute("data-loaded", "true");
+  });
+});

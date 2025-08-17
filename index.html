@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design and Basic HTML Structure</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
     <header class="header">
         <h1>ALTON HUDSON</h1>
-         <button id="darkModeToggle" class="dark-mode-btn" title="Toggle Dark Mode">🌙</button>
+        <button id="darkModeToggle" class="dark-mode-btn" title="Toggle Dark Mode">
+            <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24">
+                <path
+                    d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.48 0l1.79-1.8-1.41-1.41-1.8 1.79 1.42 1.42zm-4.24-2.83h-2v3h2v-3zm7 9h3v-2h-3v2zm-16 0h3v-2h-3v2zm12.24 7.19l1.8 1.79 1.41-1.41-1.79-1.8-1.42 1.42zm-10.48 0l-1.79 1.8 1.41 1.41 1.8-1.79-1.42-1.42zM12 6a6 6 0 100 12 6 6 0 000-12zm0 14h-2v3h2v-3z" />
+            </svg>
+
+            <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"
+                style="display:none;">
+                <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 17a7 7 0 009-4.21z" />
+            </svg>
+        </button>
         <nav>
             <ul>
                 <li><a href="#about-me">About Me</a></li>
-                <li><a href="#pojects">Projects</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -25,17 +37,18 @@
     <main>
         <section id="about-me" class="about-me">
             <h2>About Me</h2>
-            <p>My name is Alton Hudson. I am currently enrolled at Humber College as a Computer programming Student.
-            <p>My interests are:</p>
-            <div class="interest">
-                <p>Gaming</p>
-                <p>Cars</p>
-                <p>Building PC's</p>
-                <p>Movies</p>
-                <p>Coding</p>
-            </div>
+            <p class="bio">
+                Hi, I’m Alton Hudson, a Computer Programming student at Humber College with a passion for technology and
+                problem-solving. I enjoy bringing ideas to life through clean, efficient code and am continuously
+                building my skills in web development and software design.</p>
 
+            <p class="bio-2">
+                Beyond academics, I have a strong interest in gaming, cars, building PCs, and movies, which fuel my
+                curiosity for how things work and inspire my creativity as a developer. I thrive on challenges, whether
+                it’s debugging complex code or assembling high-performance hardware, and I’m excited to keep growing as
+                I pursue a career in software development.
             </p>
+            </div>
         </section>
 
         <section id="projects" class="projects">
@@ -47,7 +60,7 @@
                     <div class="hide-project-details" id="project-one">
                         <div class="project-info">
                             <img src="./images/accessbility-forms.jpeg"
-                                alt="A Screenshot of an accessbility form webpage" />
+                                alt="A Screenshot of an accessbility form webpage" loading="lazy" class="lazy-img" />
                             <div class="project-specs">
                                 <p>A dynamic, accessibility-focused form built with HTML, CSS, and JavaScript, designed
                                     to be user-friendly, interactive, and inclusive for all users</p>
@@ -66,7 +79,8 @@
                     <button class="project-details" id="project-two">Show Details</button>
                     <div class="hide-project-details" id="project-two">
                         <div class="project-info">
-                            <img src="./images/dynamic-blog.jpeg" alt="A Screenshot of an accessbility form webpage" />
+                            <img src="./images/dynamic-blog.jpeg" alt="A Screenshot of an accessbility form webpage"
+                                loading="lazy" class="lazy-img"/>
                             <div class="project-specs">
                                 <p>A dynamic, interactive blog built entirely with HTML, CSS, and JavaScript, showcasing
                                     real-time content updates and engaging user interactions..</p>
@@ -88,7 +102,7 @@
                     <div class="hide-project-details" id="project-three">
                         <div class="project-info">
 
-                            <img src="./images/pc-builder-guide.jpeg" alt="" />
+                            <img src="./images/pc-builder-guide.jpeg" alt="" loading="lazy" class="lazy-img" />
                             <div class="project-specs">
                                 <p>An interactive PC Builder Guide webpage built with HTML, CSS, and JavaScript, helping
                                     users choose and assemble components with ease and clarity.</p>
@@ -106,6 +120,55 @@
                 </div>
 
         </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js-square"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-java"></i>
+                    <p>Java</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <p>SQL & DB Management</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-git-alt"></i>
+                    <p>Git & GitHub</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-terminal"></i>
+                    <p>Terminal</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-code"></i>
+                    <p>Bash</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-linux"></i>
+                    <p>Linux</p>
+                </div>
+            </div>
+        </section>
+
+
+
 
         <section id="contact" class="contact">
             <h2>Contact Me</h2>

@@ -5,6 +5,15 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.lazy-img {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.lazy-img[data-loaded="true"] {
+  opacity: 1;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,6 +24,7 @@ body {
     line-height: 1.6;
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 header {
@@ -69,7 +79,8 @@ a:hover {
 
 .about-me,
 .projects,
-.contact {
+.contact,
+.skills {
     background-color: #2e57342f;
     padding: 30px;
     margin: 90px 0 20px 0;
@@ -77,6 +88,26 @@ a:hover {
     border-radius: 10px;
     box-shadow: 4px 4px 10px 5px rgba(50, 80, 50, 0.5);
 }
+
+.about-me {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.about-me h2 {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 2rem; 
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.about-me p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem; 
+  color: #333;
+  margin:0 25px 15px 15px;
+}
+
 
 #userName,
 #email {
@@ -127,12 +158,19 @@ h2 {
 }
 
 .grid-item:hover {
-    background-color: #1b3a1a;
+    background-color: #1e1e2f;
+    color: white;
 }
 
 .dark-mode {
     background-color: black;
 }
+
+
+ svg {
+      width: 30px;
+      height: 30px;
+    }
 
 .hide-project-details {
     display: none;
@@ -231,6 +269,42 @@ button {
     outline-offset: 2px;
 }
 
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    transition: transform 0.3s;
+}
+
+.skill i {
+    font-size: 3rem;
+    color: #0a5745;
+    margin-bottom: 10px;
+}
+
+.skill i:hover {
+    color: #4ca38f;
+}
+
+.skill p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+
 footer {
     position: fixed;
     bottom: 0;
@@ -266,6 +340,17 @@ footer {
     z-index: 100;
 }
 
+#moonIcon { 
+    display: none; 
+}
+
+.dark-mode #sunIcon { 
+    display: none; 
+}
+.dark-mode #moonIcon { 
+    display: inline; 
+}
+
 
 /* Full dark mode styles */
 .dark-mode, .dark-mode footer {
@@ -295,6 +380,9 @@ footer {
     color: #f0c94d;
 }
 
+.dark-mode .about-me p {
+        color: white;
+    }
 
 .dark-mode .grid-item {
     background: #06101d;
@@ -308,7 +396,7 @@ footer {
 .dark-mode .contact {
     background-color: #1e2a38;
     color: #e0e0e0;
-    border: 1px solid #2c3e50;
+    border: 1px solid #575656;
 }
 
 .dark-mode button {
@@ -321,6 +409,13 @@ footer {
     background-color: #887203;
     color: #1f2937;
     border: 3px solid #887203;
+}
+
+.dark-mode .skill i {
+    color:#3b5676
+}
+.dark-mode .skill i:hover {
+    color:#529af3
 }
 
 @media (max-width: 600px) {
