@@ -14,10 +14,6 @@ for (let i = 0; i < detailsBtn.length; i++) {
     })
 }
 
-//DARK MODE
-// let body = document.querySelector("body")
-// body.classList.toggle("dark-mode")
-
 let captureErrors = []
 
 const validate = () => {
@@ -66,7 +62,17 @@ submit.addEventListener("click", (e) => {
 
 const darkModeBtn = document.getElementById('darkModeToggle');
 const body = document.body;
+const sunIcon = document.getElementById("sunIcon")
+const moonIcon = document.getElementById("moonIcon")
 
 darkModeBtn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
+
+    if (body.classList.contains("dark-mode")) {
+        sunIcon.style.display = "none"
+        moonIcon.style.display = "inline"
+    }else {
+        sunIcon.style.display = "inline"
+        moonIcon.style.display = "none"
+ }
 });
